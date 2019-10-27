@@ -1,0 +1,65 @@
+{
+  "name": "MidiLevel",
+  "version": "0.0.1",
+  "description": "Control Midi Devices like nanokontrol2",
+  "author": "Kaibu",
+  "main": "main.js",
+  "license": "MIT",
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kaibu/MidiLevel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kaibu/MidiLevel/issues"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "portable": "build -w portable",
+    "test": "standard --fix",
+    "lint": "standard",
+    "lint-fix": "standard --fix"
+  },
+  "standard": {
+    "globals": [],
+    "ignore": [
+      "app/require.js"
+    ]
+  },
+  "build": {
+    "appId": "midilevel.kaibu.io",
+    "productName": "MidiLevel",
+    "win": {
+      "target": "nsis"
+    },
+    "portable": {
+      "requestExecutionLevel": "user"
+    },
+    "extraFiles": "README.md"
+  },
+  "devDependencies": {
+    "devtron": "1.4.0",
+    "electron": "^7.0.0",
+    "electron-builder": "21.2.0",
+    "electron-rebuild": "^1.8.6",
+    "standard": "*"
+  },
+  "contributors": [
+    {
+      "name": "Kaibu",
+      "email": "notkaibu@gmail.com",
+      "url": "https://github.com/Kaibu"
+    },
+    {
+      "name": "vabene1111",
+      "email": "vabene1234@googlemail.com",
+      "url": "https://github.com/vabene1111"
+    }
+  ],
+  "dependencies": {
+    "electron-store": "^5.0.0",
+    "@kaibu/korg-nano-kontrol": "^0.2.10",
+    "win-audio": "https://github.com/Kaibu/win-audio#a5e01775ef0ea2263d9c8d346603e08fb34e6997"
+  }
+}
